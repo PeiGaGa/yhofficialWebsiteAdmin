@@ -617,6 +617,84 @@ export default [
           }
         ]
       },
+      // 产品中心
+      {
+        path: 'product-center',
+        name: 'product-center',
+        meta: {
+          title: '产品中心',
+          linkName: '产品中心',
+          menuId: '16',
+        },
+        component: (r => require.ensure([], () => r(require('../pages/product-center/index.vue')), 'product-center')),
+        children: [
+          {
+            path: 'basic',
+            name: 'product_center_basic',
+            meta: {
+              title: '产品中心=>基础设置',
+              linkName: '基础设置',
+              menuId: '16',
+            },
+            component: (r => require.ensure([], () => r(require('../pages/product-center/basic/basic.vue')), 'product-center')),
+          },
+          //轮播图设置
+          {
+            path: 'banner',
+            name: 'product_center_banner',
+            meta: {
+              title: '产品中心=>轮播图设置',
+              linkName: '轮播图设置',
+              menuId: '16',
+            },
+            component: (r => require.ensure([], () => r(require('../pages/product-center/banner/index.vue')), 'product-center')),
+          },
+          //网站首页轮播图设置
+          {
+            path: 'homepage-banner',
+            name: 'product_center_homepage_banner',
+            meta: {
+              title: '产品中心=>网站首页轮播图设置',
+              linkName: '网站首页轮播图设置',
+              menuId: '16',
+            },
+            component: (r => require.ensure([], () => r(require('../pages/product-center/homepage-banner/index.vue')), 'product-center')),
+          },
+          //产品首页轮播图设置
+          {
+            path: 'product-homepage-banner',
+            name: 'product_center_product_homepage_banner',
+            meta: {
+              title: '产品中心=>产品首页轮播图设置',
+              linkName: '产品首页轮播图设置',
+              menuId: '16',
+            },
+            component: (r => require.ensure([], () => r(require('../pages/product-center/product-homepage-banner/index.vue')), 'product-center')),
+          },
+          //海上加工中心
+          {
+            path: 'processing-center',
+            name: 'product_center_processing_center',
+            meta: {
+              title: '产品中心=>海上加工中心',
+              linkName: '海上加工中心',
+              menuId: '16',
+            },
+            component: (r => require.ensure([], () => r(require('../pages/product-center/processing-center/basic.vue')), 'product-center')),
+          },
+          //营销布局
+          {
+            path: 'marketing-layout',
+            name: 'product_center_marketing_layout',
+            meta: {
+              title: '产品中心=>营销布局',
+              linkName: '营销布局',
+              menuId: '16',
+            },
+            component: (r => require.ensure([], () => r(require('../pages/product-center/marketing-layout/basic.vue')), 'product-center')),
+          }
+        ]
+      },
       // 科研优势
       {
         path: 'advantage',
