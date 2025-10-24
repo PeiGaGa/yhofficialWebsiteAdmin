@@ -1,9 +1,9 @@
 <!--
- * @Author: Assistant
- * @Date: 2024-01-01 00:00:00
- * @LastEditors: Assistant
- * @LastEditTime: 2024-01-01 00:00:00
- * @Description: 产业布局编辑页面
+ * @Author: 邹中兴
+ * @Date: 2019-01-21 10:24:32
+ * @LastEditors: 邹中兴
+ * @LastEditTime: 2020-07-07 23:16:54
+ * @Description: 
 --> 
 <template>
   <div class="page overflow-y">
@@ -36,6 +36,15 @@
           <td>
             <plugin-uploadPic ref="pic" :options="{aspectRatio: 1/1}" :useJcrop="true">选择文件</plugin-uploadPic>
             <p>建议尺寸：500*500像素</p>
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <span class="required">*</span>页面banner：
+          </th>
+          <td>
+            <plugin-uploadPic ref="file" :options="{aspectRatio: 1920/1080}" :useJcrop="true">选择文件</plugin-uploadPic>
+            <p>建议尺寸：1920*1080像素</p>
           </td>
         </tr>
         <tr>

@@ -119,22 +119,6 @@ export default [
               ),
             children: [
               {
-                path: "basic",
-                name: "home_industry_basic",
-                meta: {
-                  title: "首页管理=>产业布局=>基本设置",
-                  linkName: "基本设置",
-                  menuId: "11",
-                  hiddenContent: true,
-                },
-                component: (r) =>
-                  require.ensure(
-                    [],
-                    () => r(require("../pages/home/industry/basic.vue")),
-                    "home"
-                  ),
-              },
-              {
                 path: "edit",
                 name: "homeIndustryEdit",
                 meta: {
