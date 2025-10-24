@@ -1,13 +1,13 @@
 <template>
   <div>
     <div class="page" v-if="$route.path=='/platform/achievement'">
-      <model-list-index :menuId="menuId"></model-list-index>
+      <platform-achievement-list :menuId="menuId"></platform-achievement-list>
     </div>
     <router-view></router-view>
   </div>
 </template>
 <script>
-  import list from '../../model/list/index.vue';
+  import list from './list.vue';
   export default{
     data(){
       return {
