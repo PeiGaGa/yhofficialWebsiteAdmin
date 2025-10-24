@@ -1,0 +1,20 @@
+<template>
+  <div>
+    <model-basic :menuId="menuId"></model-basic>
+  </div>
+</template>
+<script>
+  import basic from '../../model/basic/index.vue';
+  export default{
+    data(){
+      return {
+        menuId: this.$route.meta.menuId
+      }
+    },
+    components: {
+      [basic.name]: basic
+    },
+    created(){
+    }
+  }
+</script>

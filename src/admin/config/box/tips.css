@@ -1,0 +1,62 @@
+.tips {
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  z-index: 1000;
+  transform: translate3d(-50%, 0, 0);
+  border-radius: 5px;
+  border: 1px solid;
+  padding: 10px;
+  animation-name: tipsInDown;
+}
+.tips.success {
+  background-color: #f0f9eb;
+  border-color: #e1f3d8;
+  color: #67c23a;
+}
+.tips.error {
+  background-color: #fee;
+  border-color: #fedddd;
+  color: #fa5555;
+}
+.tips.warning {
+  background-color: #fdf5e6;
+  border-color: #fbeccd;
+  color: #eb9e05;
+}
+.tips .c {
+  line-height: 24px;
+}
+.tips .iconfont {
+  display: block;
+  margin-right: 10px;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+}
+@keyframes tipsInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(-50%, -3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(-50%, 25px, 0);
+  }
+  75% {
+    transform: translate3d(-50%, -10px, 0);
+  }
+  90% {
+    transform: translate3d(-50%, 5px, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}

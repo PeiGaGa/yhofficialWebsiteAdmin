@@ -1,0 +1,77 @@
+.select-wrap{
+    position: relative;
+    font-size: 12px;
+    &.hover{
+        dd{
+            display: block;
+        }
+    }
+    //多选
+    &.multiselect{
+        dd{
+            li.item{
+                padding: 5px 10px 5px 30px;
+                .icon-checkbox{
+                    float: left;
+                    margin-left: -20px;
+                    color: #999;
+                    &.icon-checkbox-checked{
+                        color: #0fc1af;
+                    }
+                }
+            }
+        }
+    }
+    dt{
+        position: relative;
+        cursor: pointer;
+        .input {
+            padding-right: 30px;
+            &:hover{
+                border-color: #e1e1e1 !important;
+            }
+        }
+        .icon-arrow-down {
+            position: absolute;
+            right: 10px;
+            top: 0;
+            height: 28px;
+            font-size: 14px;
+            color: #999;
+            line-height: 28px;
+        }
+    }
+    dd{
+        display: none;
+        position: absolute;
+        top: 27px;
+        left: 0;
+        right: 0;
+        z-index: 11;
+        max-height: 150px;
+        border: 1px solid #e1e1e1;
+        background: #fff;
+        overflow-y: auto;
+        box-shadow: 0 3px 8px #ccc;
+        .search-bar{
+            padding: 5px 10px;
+            border-bottom: 1px solid #e1e1e1;
+            .input{
+                border-radius: 30px;
+            }
+        }
+        li{
+            line-height: 20px;
+            padding: 5px 10px;
+            border-bottom: 1px solid #e1e1e1;
+            cursor: pointer;
+            text-align: left;
+            &:last-child{
+                border-bottom: 0;
+            }
+            &:hover{
+                background: #e1e9ea;
+            }
+        }
+    }
+}

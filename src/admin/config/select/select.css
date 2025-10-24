@@ -1,0 +1,70 @@
+.select-wrap {
+  position: relative;
+  font-size: 12px;
+}
+.select-wrap.hover dd {
+  display: block;
+}
+.select-wrap.multiselect dd li.item {
+  padding: 5px 10px 5px 30px;
+}
+.select-wrap.multiselect dd li.item .icon-checkbox {
+  float: left;
+  margin-left: -20px;
+  color: #999;
+}
+.select-wrap.multiselect dd li.item .icon-checkbox.icon-checkbox-checked {
+  color: #0fc1af;
+}
+.select-wrap dt {
+  position: relative;
+  cursor: pointer;
+}
+.select-wrap dt .input {
+  padding-right: 30px;
+}
+.select-wrap dt .input:hover {
+  border-color: #e1e1e1 !important;
+}
+.select-wrap dt .icon-arrow-down {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  height: 28px;
+  font-size: 14px;
+  color: #999;
+  line-height: 28px;
+}
+.select-wrap dd {
+  display: none;
+  position: absolute;
+  top: 27px;
+  left: 0;
+  right: 0;
+  z-index: 11;
+  max-height: 150px;
+  border: 1px solid #e1e1e1;
+  background: #fff;
+  overflow-y: auto;
+  box-shadow: 0 3px 8px #ccc;
+}
+.select-wrap dd .search-bar {
+  padding: 5px 10px;
+  border-bottom: 1px solid #e1e1e1;
+}
+.select-wrap dd .search-bar .input {
+  border-radius: 30px;
+}
+.select-wrap dd li {
+  line-height: 20px;
+  padding: 5px 10px;
+  border-bottom: 1px solid #e1e1e1;
+  cursor: pointer;
+  text-align: left;
+}
+.select-wrap dd li:last-child {
+  border-bottom: 0;
+}
+.select-wrap dd li:hover {
+  background: #e1e9ea;
+}

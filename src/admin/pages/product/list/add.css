@@ -1,0 +1,9 @@
+.page {
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #fff;
+}
+.page .code-wrap {
+  width: 100%;
+  overflow-x: auto;
+}

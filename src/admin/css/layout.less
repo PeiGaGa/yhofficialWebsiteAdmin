@@ -1,0 +1,140 @@
+//修改完后请和编辑器同步/src/admin/config/editor/editor.vue
+//同步方法：61行，initialStyle值改为layout.css的内容
+//分成两栏等分
+.col-2_1v1 {
+  width: 100%;
+  overflow: hidden; //通过overflow创建bfc
+  clear: both;
+  td{
+    border:1px solid #737373;
+  }
+  &.line+{
+    >div:nth-child(2n){
+      border-top:1px solid #ededed;
+    }
+  }
+  > div {
+    overflow: hidden;
+    clear: both;
+    img {
+      max-width: 100%;
+    }
+    //奇数行
+    &:nth-child(odd) {
+      //第一列
+      > div {
+        width: 44%;
+        padding: 3%;
+        //奇数列
+        &:nth-child(odd) {
+          float: right;
+        }
+        &:nth-child(even) {
+          float: left;
+          text-align:center;
+        }
+      }
+    }
+    //偶数行
+    &:nth-child(even) {
+      //第一列
+      > div {
+        width: 44%;
+        padding: 3%;
+        //奇数列
+        &:nth-child(odd) {
+          float: left;
+        }
+        &:nth-child(even) {
+          float: right;
+          text-align:center;
+        }
+      }
+    }
+  }
+
+}
+
+//分成两栏，宽度比2:1
+.col-2_2v1 {
+  width: 100%;
+  overflow: hidden; //通过overflow创建bfc
+  clear: both;
+  > div {
+    overflow: hidden;
+    clear: both;
+    img {
+      max-width: 100%;
+    }
+    //奇数行
+    &:nth-child(odd) {
+      //第一列
+      > div {
+        padding: 3%;
+        //奇数列
+        &:nth-child(odd) {
+          width: 60.6666666666666666666666%;
+          float: left;
+        }
+        &:nth-child(even) {
+
+          width: 27.3333333333333333333333%;
+          float: right;
+        }
+      }
+    }
+    //偶数行
+    &:nth-child(even) {
+      background: #f8f9fb;
+      //第一列
+      > div {
+        padding: 3%;
+        //奇数列
+        &:nth-child(odd) {
+          width: 60.6666666666666666666666%;
+          float: right;
+        }
+        &:nth-child(even) {
+          width: 27.3333333333333333333333%;
+          float: left;
+        }
+      }
+    }
+  }
+
+}
+
+//字体设置
+.product_list {
+  font-size: 16px;
+  strong {
+    margin: 1em 0;
+  }
+  p {
+    text-indent: 2em;
+    margin: 1em 0;
+  }
+  .btn-more {
+    margin-top: 1em;
+    display: inline-block;
+    margin-right: 10px;
+    padding: .5em;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid #00b3dc;
+    color: #00b3dc;
+    transition: background 0.3s;
+  }
+  .btn-buy {
+    margin-top: 1em;
+    display: inline-block;
+    margin-right: 10px;
+    padding: .5em 2em;
+    text-align: center;
+    border-radius: 6px;
+    background:#0057a0;
+    color: #fff;
+    transition: background 0.3s;
+  }
+}
+

@@ -1,0 +1,99 @@
+.col-2_1v1,
+.col-2_1v1 > div,
+.col-2_2v1,
+.col-2_2v1 > div {
+    overflow: hidden;
+    clear: both;
+}
+.col-2_1v1 > div img,
+.col-2_2v1 > div img {
+    max-width: 100%;
+}
+.col-2_1v1 {
+    width: 100%;
+}
+.col-2_1v1 > div:nth-child(even) > div,
+.col-2_1v1 > div:nth-child(odd) > div {
+    width: 44%;
+    padding: 3%;
+}
+.col-2_1v1 td {
+    border: 1px solid #737373;
+}
+.col-2_1v1.line > div:nth-child(2n) {
+    border-top: 1px solid #ededed;
+}
+.col-2_1v1 > div:nth-child(odd) > div:nth-child(odd) {
+    float: right;
+}
+.col-2_1v1 > div:nth-child(odd) > div:nth-child(even) {
+    float: left;
+    text-align: center;
+}
+.col-2_1v1 > div:nth-child(even) > div:nth-child(odd) {
+    float: left;
+}
+.col-2_1v1 > div:nth-child(even) > div:nth-child(even) {
+    float: right;
+    text-align: center;
+}
+.col-2_2v1 {
+    width: 100%;
+}
+.col-2_2v1 > div:nth-child(odd) > div {
+    padding: 3%;
+}
+.col-2_2v1 > div:nth-child(odd) > div:nth-child(odd) {
+    width: 60.66666667%;
+    float: left;
+}
+.col-2_2v1 > div:nth-child(odd) > div:nth-child(even) {
+    width: 27.33333333%;
+    float: right;
+}
+.col-2_2v1 > div:nth-child(even) {
+    background: #f8f9fb;
+}
+.col-2_2v1 > div:nth-child(even) > div {
+    padding: 3%;
+}
+.col-2_2v1 > div:nth-child(even) > div:nth-child(odd) {
+    width: 60.66666667%;
+    float: right;
+}
+.col-2_2v1 > div:nth-child(even) > div:nth-child(even) {
+    width: 27.33333333%;
+    float: left;
+}
+.product_list {
+    font-size: 16px;
+}
+.product_list strong {
+    margin: 1em 0;
+}
+.product_list p {
+    text-indent: 2em;
+    margin: 1em 0;
+}
+.product_list .btn-more {
+    margin-top: 1em;
+    display: inline-block;
+    margin-right: 10px;
+    padding: 0.5em;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid #00b3dc;
+    color: #00b3dc;
+    transition: background 0.3s;
+}
+.btn-buy {
+    margin-top: 1em;
+    display: inline-block;
+    margin-right: 10px;
+    padding: 0.5em;
+    text-align: center;
+    border-radius: 6px;
+    background: #0057a0;
+    color: #fff;
+    transition: background 0.3s;
+}

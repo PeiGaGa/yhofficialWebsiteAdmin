@@ -1,0 +1,61 @@
+.page {
+  background: #0fc1af;
+}
+.page .container .box {
+  position: relative;
+  margin-bottom: 20px;
+  display: block;
+  box-sizing: content-box;
+  width: 300px;
+  height: 40px;
+  border: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 40px;
+  overflow: hidden;
+}
+.page .container .box:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 6px;
+  right: 6px;
+  height: 1px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7), #ffffff, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+}
+.page .container .box:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 6px;
+  right: 6px;
+  height: 1px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7), #ffffff, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+}
+.page .container .box .input {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background: none;
+  border: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+.page .container .box .input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.page .container .submit {
+  position: relative;
+  display: block;
+  box-sizing: content-box;
+  width: 300px;
+  height: 40px;
+  line-height: 40px;
+  border: 0;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(to right, #ff9c61, #fb3b60, #aa7ee0);
+  border-radius: 40px;
+  overflow: hidden;
+}

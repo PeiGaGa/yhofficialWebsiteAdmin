@@ -1,0 +1,97 @@
+.uploadPic{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    .btn{
+        position: relative;
+        display: block;
+        width: 120px;
+        text-align: center;
+        padding: 0;
+        height: 30px;
+        line-height: 30px;
+        background: #efefef;
+        border: 1px solid #e1e1e1;
+        color: #999;
+        overflow: hidden;
+    }
+    .process{
+        position: relative;
+        width: 100%;
+        height: 2px;
+        background: #0fc1af;
+        transition: width 0.01s;
+    }
+    .list{
+        position: relative;
+        margin-top: 10px;
+        padding: 10px;
+        background: #f4f4f4;
+        ul.multiple{
+            margin-left: -10px;
+            margin-top: -10px;
+            li{
+                position: relative;
+                float: left;
+                margin-left: 10px;
+                margin-top: 10px;
+                border: 1px solid #e1e1e1;
+                &:hover{
+                    .icon-del{
+                        display: block;
+                    }
+                }
+                .pic{
+                    display: block;
+                    width: 60px;
+                    height: 60px;
+                }
+                .icon-del{
+                    position: absolute;
+                    top: -5px;
+                    right: -5px;
+                    display: none;
+                    width: 16px;
+                    height: 16px;
+                    line-height: 16px;
+                    text-align: center;
+                    background: #f00;
+                    border-radius: 100%;
+                    color: #fff;
+                    font-size: 12px;
+                }
+            }
+        }
+        ul.single{
+            li{
+                width: 100%;
+                position: relative;
+                border: 1px solid #e1e1e1;
+                &:hover{
+                    .icon-del{
+                        display: block;
+                    }
+                }
+                .pic{
+                    display: block;
+                    max-width: 100%;
+                    max-height: 60px;
+                }
+                .icon-del{
+                    position: absolute;
+                    top: -5px;
+                    right: -5px;
+                    display: none;
+                    width: 16px;
+                    height: 16px;
+                    line-height: 16px;
+                    text-align: center;
+                    background: #f00;
+                    border-radius: 100%;
+                    color: #fff;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

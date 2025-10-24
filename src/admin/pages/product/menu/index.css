@@ -1,0 +1,15 @@
+.page {
+  padding: 10px;
+  background: #fff;
+}
+.page .table-list-1 {
+  margin-top: 10px;
+}
+.page .table-list-1 .pic {
+  display: block;
+  max-width: 400px;
+  max-height: 80px;
+}
+.page .table-list-1 .child td {
+  background: #f4f4f4;
+}

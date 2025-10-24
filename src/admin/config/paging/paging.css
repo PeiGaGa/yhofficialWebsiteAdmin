@@ -1,0 +1,14 @@
+.paging {
+  height: 30px;
+}
+.paging .total span {
+  margin-right: 20px;
+}
+.paging .list span {
+  margin: 0 5px;
+  cursor: pointer;
+}
+.paging .list span:hover {
+  color: #0fc1af;
+  text-decoration: underline;
+}

@@ -1,0 +1,26 @@
+.codemirror {
+  position: relative;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+}
+.codemirror .content {
+  position: relative;
+  overflow: hidden;
+}
+.codemirror .content .source {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  overflow: hidden;
+}
+.codemirror .content .view {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  overflow: hidden;
+  padding: 10px;
+}
