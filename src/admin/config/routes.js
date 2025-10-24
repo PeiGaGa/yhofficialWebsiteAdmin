@@ -550,6 +550,73 @@ export default [
           }
         ]
       },
+       // 科研平台
+       {
+        path: 'platform',
+        name: 'platform',
+        meta: {
+          title: '科研平台',
+          linkName: '科研平台',
+          menuId: '8',
+        },
+        component: (r => require.ensure([], () => r(require('../pages/platform/index.vue')), 'platform')),
+        children: [
+          {
+            path: 'basic',
+            name: 'platform_basic',
+            meta: {
+              title: '科研平台=>基础设置',
+              linkName: '基础设置',
+              menuId: '8',
+            },
+            component: (r => require.ensure([], () => r(require('../pages/platform/basic/basic.vue')), 'platform')),
+          },
+          //轮播图设置
+          {
+            path: 'banner',
+            name: 'platform_banner',
+            meta: {
+              title: '科研平台=>轮播图设置',
+              linkName: '轮播图设置',
+              menuId: '8',
+            },
+            component: (r => require.ensure([], () => r(require('../pages/platform/banner/index.vue')), 'platform')),
+          },
+          // 成果列表
+          {
+            path: 'achievement',
+            name: 'platform_achievement',
+            meta: {
+              title: '科研平台=>成果列表',
+              linkName: '成果列表',
+              menuId: '9',
+            },
+            component: (r => require.ensure([], () => r(require('../pages/platform/achievement/index.vue')), 'platform')),
+            children: [
+              {
+                path: 'add',
+                name: 'platform_achievement_add',
+                meta: {
+                  title: '科研平台=>成果列表=>新增',
+                  linkName: '成果列表_新增',
+                  menuId: '9',
+                },
+                component: (r => require.ensure([], () => r(require('../pages/platform/achievement/add.vue')), 'platform'))
+              },
+              {
+                path: 'edit',
+                name: 'platform_achievement_edit',
+                meta: {
+                  title: '科研平台=>成果列表=>编辑',
+                  linkName: '成果列表_编辑',
+                  menuId: '9',
+                },
+                component: (r => require.ensure([], () => r(require('../pages/platform/achievement/edit.vue')), 'platform')),
+              }
+            ]
+          }
+        ]
+      },
       // 科研优势
       {
         path: 'advantage',
@@ -847,73 +914,6 @@ export default [
 
         ]
 
-      },
-      // 科研平台
-      {
-        path: 'platform',
-        name: 'platform',
-        meta: {
-          title: '科研平台',
-          linkName: '科研平台',
-          menuId: '8',
-        },
-        component: (r => require.ensure([], () => r(require('../pages/platform/index.vue')), 'platform')),
-        children: [
-          {
-            path: 'basic',
-            name: 'platform_basic',
-            meta: {
-              title: '科研平台=>基础设置',
-              linkName: '基础设置',
-              menuId: '8',
-            },
-            component: (r => require.ensure([], () => r(require('../pages/platform/basic/basic.vue')), 'platform')),
-          },
-          //轮播图设置
-          {
-            path: 'banner',
-            name: 'platform_banner',
-            meta: {
-              title: '科研平台=>轮播图设置',
-              linkName: '轮播图设置',
-              menuId: '8',
-            },
-            component: (r => require.ensure([], () => r(require('../pages/platform/banner/index.vue')), 'platform')),
-          },
-          // 成果列表
-          {
-            path: 'achievement',
-            name: 'platform_achievement',
-            meta: {
-              title: '科研平台=>成果列表',
-              linkName: '成果列表',
-              menuId: '9',
-            },
-            component: (r => require.ensure([], () => r(require('../pages/platform/achievement/index.vue')), 'platform')),
-            children: [
-              {
-                path: 'add',
-                name: 'platform_achievement_add',
-                meta: {
-                  title: '科研平台=>成果列表=>新增',
-                  linkName: '成果列表_新增',
-                  menuId: '9',
-                },
-                component: (r => require.ensure([], () => r(require('../pages/platform/achievement/add.vue')), 'platform'))
-              },
-              {
-                path: 'edit',
-                name: 'platform_achievement_edit',
-                meta: {
-                  title: '科研平台=>成果列表=>编辑',
-                  linkName: '成果列表_编辑',
-                  menuId: '9',
-                },
-                component: (r => require.ensure([], () => r(require('../pages/platform/achievement/edit.vue')), 'platform')),
-              }
-            ]
-          }
-        ]
       },
       // 业务模块
       {
