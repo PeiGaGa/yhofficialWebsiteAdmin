@@ -38,11 +38,10 @@ export default {
         success: (res) => {
           this.form = res.data;
           if (res.data.fileId && res.data.fileUrl) {
-            //去掉了file对象，这里注释掉。如果要上传栏目图，取消这里注释
-            // this.$refs.file.setResult({
-            //   id: this.form.fileId,
-            //   url: this.form.fileUrl
-            // });
+            this.$refs.file.setResult({
+              id: this.form.fileId,
+              url: this.form.fileUrl
+            });
           }
         },
       });
@@ -57,13 +56,10 @@ export default {
         return;
       }
       this.form.content = content;
-      //阿提：如果恢复栏目图片上传，请取消以下注释
-      // if (this.$refs.file.result.length == 0) {
-      //   this.$showWarning('请上传页面banner图');
-      //   return;
-      // }
-      // this.form.fileId = this.$refs.file.result[0].id;
-      // this.form.fileUrl = this.$refs.file.result[0].url;
+      if (this.$refs.file.result.length > 0) {
+        this.form.fileId = this.$refs.file.result[0].id;
+        this.form.fileUrl = this.$refs.file.result[0].url;
+      }
       if(!this.form.name){
         this.$showWarning('请填写栏目名称');
         return;

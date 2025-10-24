@@ -50,8 +50,9 @@ let router = new VueRouter({
 });
 //正式发布注释掉本行
 // Vue.prototype.$baseUrl = 'http://42.194.220.137:8080/';
+Vue.prototype.$baseUrl = 'http://47.115.63.13:80/';
 //正式发布启用下行
-Vue.prototype.$baseUrl = '';
+// Vue.prototype.$baseUrl = '';
 //正式发布使用本行,需注释掉本地测试行
 Vue.prototype.$editHomeUrl = '/static/admin/dist/js/lib/ueditor/';
 
