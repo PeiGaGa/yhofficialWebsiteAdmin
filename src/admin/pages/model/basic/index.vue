@@ -1,22 +1,19 @@
 <template>
   <div class="page overflow-y">
     <form onsubmit="return false;">
-      <!--<table class="table-form-1">-->
-        <!--<tr>-->
-          <!--<th width="120"><span class="required">*</span>页面banner：</th>-->
-          <!--<td>-->
-            <!--<plugin-uploadPic ref="file" :options="{aspectRatio: 1920/1080}" :useJcrop="true">选择文件</plugin-uploadPic>-->
-            <!--<p>建议尺寸：1920*1080像素</p>-->
-          <!--</td>-->
-        <!--</tr>-->
-      <!--</table>-->
-
-      <table class="table-form-1 marginTop10">
+      <table class="table-form-1">
         <caption>栏目设置</caption>
         <tr>
           <th width="120"><span class="required">*</span>栏目名称：</th>
           <td>
             <input type="text" class="input" v-model="form.name" />
+          </td>
+        </tr>
+        <tr>
+          <th width="120">图片上传：</th>
+          <td>
+            <plugin-uploadPic ref="file" :options="{aspectRatio: 1920/1080}" :useJcrop="true">选择文件</plugin-uploadPic>
+            <p>建议尺寸：1920*1080像素</p>
           </td>
         </tr>
         <tr v-show="!hiddenContent">
@@ -33,13 +30,6 @@
           <th width="120"><span class="required">*</span>页面标题：</th>
           <td>
             <input type="text" class="input" v-model="form.title" />
-          </td>
-        </tr>
-        <tr>
-          <th width="120">页面banner：</th>
-          <td>
-            <plugin-uploadPic ref="file" :options="{aspectRatio: 1920/1080}" :useJcrop="true">选择文件</plugin-uploadPic>
-            <p>建议尺寸：1920*1080像素</p>
           </td>
         </tr>
         <tr>

@@ -7,7 +7,7 @@
 --> 
 <template>
   <div class="page">
-    <model-class routerPath="/joinus"></model-class>
+    <model-class routerPath="/contact"></model-class>
   </div>
 </template>
 <script>

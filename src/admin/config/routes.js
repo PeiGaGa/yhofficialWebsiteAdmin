@@ -147,7 +147,7 @@ export default [
             component: (r) =>
               require.ensure(
                 [],
-                () => r(require("../pages/home/era/index.vue")),
+                () => r(require("../pages/home/era/basic.vue")),
                 "home"
               ),
             children: [
