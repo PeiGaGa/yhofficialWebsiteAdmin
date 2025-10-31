@@ -28,12 +28,6 @@ export default {
                 },
                 success: (res)=>{
                     this.form = res.data;
-                    if(res.data.fileId && res.data.fileUrl){
-                        this.$refs.file.setResult({
-                            id: this.form.fileId,
-                            url: this.form.fileUrl
-                        });
-                    }
                     if(res.data.picId && res.data.picUrl){
                         this.$refs.pic.setResult({
                             id: this.form.picId,
@@ -57,12 +51,6 @@ export default {
                 return;
             }
             this.form.content = content;
-            if(this.$refs.file.result.length==0){
-                this.$showWarning('请上传页面banner图');
-                return;
-            }
-            this.form.fileId = this.$refs.file.result[0].id;
-            this.form.fileUrl = this.$refs.file.result[0].url;
             if(this.$refs.pic.result.length==0){
                 this.$showWarning('请上传首页展示图');
                 return;
@@ -78,8 +66,8 @@ export default {
                     time: new Date().getTime()
                 },
                 success: (res)=>{
-                    this.$showSuccess('新增成功');
-                    history.go(-1);
+                    this.$showSuccess('保存成功');
+                    this.$router.push({name: 'home_industry'});
                 },
             });
         }

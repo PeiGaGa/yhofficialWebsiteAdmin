@@ -15,6 +15,14 @@ export default {
             vm.initData();
         });
     },
+    watch: {
+        '$route'(to, from) {
+            // 当从子路由（如编辑页面）返回到列表页面时，刷新数据
+            if (to.path === '/home/industry' && from.path === '/home/industry/edit') {
+                this.initData();
+            }
+        }
+    },
     created(){
     },
     methods: {

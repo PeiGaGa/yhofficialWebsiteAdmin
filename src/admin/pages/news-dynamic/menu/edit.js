@@ -54,7 +54,7 @@ export default {
         },
         success: (res) => {
           this.$showSuccess('保存成功');
-          history.go(-1);
+          this.$router.push({name: 'news_dynamic_menu'});
         },
       });
     }

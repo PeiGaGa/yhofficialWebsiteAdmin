@@ -30,12 +30,14 @@ export default {
         },
         success: (res) => {
           this.form = res.data;
-          // if (res.data && res.data.fileId && res.data.fileUrl) {
-          //   this.$refs.file.setResult({
-          //     id: this.form.fileId,
-          //     url: this.form.fileUrl
-          //   });
-          // }
+          this.$nextTick(() => {
+            if (res.data && res.data.fileId && res.data.fileUrl) {
+              this.$refs.file.setResult({
+                id: this.form.fileId,
+                url: this.form.fileUrl
+              });
+            }
+          });
         },
       });
     },
@@ -46,10 +48,10 @@ export default {
         return;
       }
       this.form.content = content;
-      // if (this.$refs.file.result.length > 0) {
-      //   this.form.fileId = this.$refs.file.result[0].id;
-      //   this.form.fileUrl = this.$refs.file.result[0].url;
-      // }
+      if (this.$refs.file && this.$refs.file.result.length > 0) {
+        this.form.fileId = this.$refs.file.result[0].id;
+        this.form.fileUrl = this.$refs.file.result[0].url;
+      }
       this.form.id = this.menuId;
       this.$loader.show();
       this.$ajax({
