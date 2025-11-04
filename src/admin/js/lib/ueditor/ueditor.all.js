@@ -24820,7 +24820,7 @@ UE.plugins.xssFilter = function() {
 	var config = UEDITOR_CONFIG;
 	var whitList = config.whitList;
 
-	function filter(node) {
+    function filter(node) {
 
 		var tagName = node.tagName;
 		var attrs = node.attrs;
@@ -24830,12 +24830,15 @@ UE.plugins.xssFilter = function() {
 			return false;
 		}
 
-		UE.utils.each(attrs, function (val, key) {
-
-			if (whitList[tagName].indexOf(key) === -1) {
-				node.setAttr(key);
-			}
-		});
+        UE.utils.each(attrs, function (val, key) {
+            // 允许保留 Vue 作用域样式属性（如 data-v-xxxx）
+            if (key && key.indexOf('data-v-') === 0) {
+                return;
+            }
+            if (whitList[tagName].indexOf(key) === -1) {
+                node.setAttr(key);
+            }
+        });
 	}
 
 	// 添加inserthtml\paste等操作用的过滤规则
