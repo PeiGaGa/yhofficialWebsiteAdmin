@@ -781,7 +781,7 @@ export default [
             meta: {
               title: "新闻动态=>新闻列表",
               linkName: "新闻列表",
-              menuId: "62",
+              menuId: "6",
             },
             component: (r) =>
               require.ensure(
@@ -796,7 +796,7 @@ export default [
                 meta: {
                   title: "新闻动态=>新闻列表=>新增",
                   linkName: "新增",
-                  menuId: "62",
+                  menuId: "6",
                 },
                 component: (r) =>
                   require.ensure(
@@ -811,7 +811,7 @@ export default [
                 meta: {
                   title: "新闻动态=>新闻列表=>编辑",
                   linkName: "编辑",
-                  menuId: "62",
+                  menuId: "6",
                 },
                 component: (r) =>
                   require.ensure(
