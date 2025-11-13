@@ -37,8 +37,8 @@
         <tr>
           <th width="80"><span class="required" v-if="form.picRecommend">*</span>图片：</th>
           <td>
-            <plugin-uploadPic ref="pic" :options="{aspectRatio: 600/332}" :useJcrop="true">选择文件</plugin-uploadPic>
-            <p>建议尺寸：600*332像素</p>
+            <plugin-uploadPic ref="pic">选择文件</plugin-uploadPic>
+            <!-- <p>建议尺寸：600*332像素</p> -->
           </td>
           </td>
         </tr>

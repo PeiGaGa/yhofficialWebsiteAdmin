@@ -11,11 +11,11 @@
             <tr>
                 <th width="80"><span class="required">*</span>图片：</th>
                 <td>
-                    <plugin-uploadPic ref="file" :options="{aspectRatio: 1920/400}" :useJcrop="true">选择文件</plugin-uploadPic>
-                    <p>建议尺寸：1920*400像素</p>
+                    <plugin-uploadPic ref="file">选择文件</plugin-uploadPic>
+                    <!-- <p>建议尺寸：2200*1360像素</p> -->
                 </td>
                 </td>
-            </tr>
+            </tr>   
             <tr>
                 <th><span class="required">*</span>主文字：</th>
                 <td>

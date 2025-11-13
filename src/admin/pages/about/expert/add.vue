@@ -51,8 +51,8 @@
             <span class="required">*</span>头像：
           </th>
           <td>
-            <plugin-uploadPic ref="pic" :options="{aspectRatio: 240/320}" :useJcrop="true">选择文件</plugin-uploadPic>
-            <p>建议尺寸：480*640像素</p>
+            <plugin-uploadPic ref="pic">选择文件</plugin-uploadPic>
+            <!-- <p>建议尺寸：480*640像素</p> -->
           </td>
         </tr>
         <tr>

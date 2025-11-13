@@ -34,8 +34,8 @@
             <span class="required">*</span>首页展示图：
           </th>
           <td>
-            <plugin-uploadPic ref="pic" :options="{aspectRatio: 1/1}" :useJcrop="true">选择文件</plugin-uploadPic>
-            <p>建议尺寸：500*500像素</p>
+            <plugin-uploadPic ref="pic">选择文件</plugin-uploadPic>
+            <!-- <p>建议尺寸：500*500像素</p> -->
           </td>
         </tr>
         <tr>

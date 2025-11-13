@@ -17,8 +17,8 @@
                 <tr>
                     <th>页面banner：</th>
                     <td>
-                        <plugin-uploadPic ref="file" :options="{aspectRatio: 1920/885}" :useJcrop="true">选择文件</plugin-uploadPic>
-                        <p>建议尺寸：1920*885像素</p>
+                        <plugin-uploadPic ref="file">选择文件</plugin-uploadPic>
+                        <!-- <p>建议尺寸：1920*885像素</p> -->
                     </td>
                 </tr>
             </table>

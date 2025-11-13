@@ -19,8 +19,8 @@
                 <tr>
                     <th width="120"><span class="required">*</span>封面图：</th>
                     <td>
-                        <plugin-uploadPic ref="picUrl" :options="{aspectRatio: 520/360}" :useJcrop="true">选择文件</plugin-uploadPic>
-                        <p>建议尺寸：520*360像素</p>
+                        <plugin-uploadPic ref="picUrl">选择文件</plugin-uploadPic>
+                        <!-- <p>建议尺寸：520*360像素</p> -->
                     </td>
                 </tr>
                 <tr>

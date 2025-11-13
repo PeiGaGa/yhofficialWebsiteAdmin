@@ -17,29 +17,29 @@
                 <tr>
                     <th><span class="required">*</span>分类图片一：</th>
                     <td>
-                        <plugin-uploadPic ref="pic" :options="{aspectRatio: 1}" :useJcrop="true">选择文件</plugin-uploadPic>
-                        <p>建议尺寸：400*400像素</p>
+                        <plugin-uploadPic ref="pic">选择文件</plugin-uploadPic>
+                        <!-- <p>建议尺寸：400*400像素</p> -->
                     </td>
                 </tr>
                 <tr>
                     <th><span class="required">*</span>分类图片二：</th>
                     <td>
-                        <plugin-uploadPic ref="pic2" :options="{aspectRatio: 1}" :useJcrop="true">选择文件</plugin-uploadPic>
-                        <p>建议尺寸：400*400像素</p>
+                        <plugin-uploadPic ref="pic2">选择文件</plugin-uploadPic>
+                        <!-- <p>建议尺寸：400*400像素</p> -->
                     </td>
                 </tr>
                 <tr>
                     <th><span class="required">*</span>分类图片三：</th>
                     <td>
-                        <plugin-uploadPic ref="pic3" :options="{aspectRatio: 1}" :useJcrop="true">选择文件</plugin-uploadPic>
-                        <p>建议尺寸：400*400像素</p>
+                        <plugin-uploadPic ref="pic3">选择文件</plugin-uploadPic>
+                        <!-- <p>建议尺寸：400*400像素</p> -->
                     </td>
                 </tr>
                 <tr>
                     <th><span class="required">*</span>页面banner：</th>
                     <td>
-                        <plugin-uploadPic ref="file" :options="{aspectRatio: 1920/885}" :useJcrop="true">选择文件</plugin-uploadPic>
-                        <p>建议尺寸：1920*885像素</p>
+                        <plugin-uploadPic ref="file">选择文件</plugin-uploadPic>
+                        <!-- <p>建议尺寸：1920*885像素</p> -->
                     </td>
                 </tr>
             </table>

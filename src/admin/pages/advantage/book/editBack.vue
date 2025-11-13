@@ -4,8 +4,8 @@
             <tr>
                 <th width="80"><span class="required">*</span>图片：</th>
                 <td>
-                    <plugin-uploadPic ref="file" :options="{aspectRatio: 220/300}" :useJcrop="true">选择文件</plugin-uploadPic>
-                    <p>建议尺寸：220*300</p>
+                    <plugin-uploadPic ref="file">选择文件</plugin-uploadPic>
+                    <!-- <p>建议尺寸：220*300</p> -->
                 </td>
                 </td>
             </tr>

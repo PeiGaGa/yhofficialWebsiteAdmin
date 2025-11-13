@@ -17,8 +17,8 @@
               <tr>
                 <th><span class="required">*</span>分类图片：</th>
                 <td>
-                  <plugin-uploadPic ref="pic" :options="{aspectRatio: 2/1}" :useJcrop="true"></plugin-uploadPic>
-                  <p>建议尺寸：560*280像素</p>
+                  <plugin-uploadPic ref="pic"></plugin-uploadPic>
+                  <!-- <p>建议尺寸：560*280像素</p> -->
                 </td>
               </tr>
             </table>

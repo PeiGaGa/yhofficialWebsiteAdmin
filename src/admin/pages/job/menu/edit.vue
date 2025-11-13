@@ -17,22 +17,22 @@
                 <tr>
                     <th><span class="required">*</span>分类图片：</th>
                     <td>
-                        <plugin-uploadPic ref="pic" :options="{aspectRatio: 2/1}" :useJcrop="true"></plugin-uploadPic>
-                        <p>建议尺寸：560*280像素</p>
+                        <plugin-uploadPic ref="pic"></plugin-uploadPic>
+                        <!-- <p>建议尺寸：560*280像素</p> -->
                     </td>
                 </tr>
                 <tr>
                     <th><span class="required">*</span>分类横幅：</th>
                     <td>
-                        <plugin-uploadPic ref="ad" :options="{aspectRatio: 1170/200}" :useJcrop="true"></plugin-uploadPic>
-                        <p>建议尺寸：1170*200像素</p>
+                        <plugin-uploadPic ref="ad"></plugin-uploadPic>
+                        <!-- <p>建议尺寸：1170*200像素</p> -->
                     </td>
                 </tr>
                 <tr>
                     <th><span class="required">*</span>页面banner：</th>
                     <td>
-                        <plugin-uploadPic ref="file" :options="{aspectRatio: 1920/885}" :useJcrop="true">选择文件</plugin-uploadPic>
-                        <p>建议尺寸：1920*885像素</p>
+                        <plugin-uploadPic ref="file">选择文件</plugin-uploadPic>
+                        <!-- <p>建议尺寸：1920*885像素</p> -->
                     </td>
                 </tr>
             </table>
