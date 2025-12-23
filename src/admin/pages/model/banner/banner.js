@@ -67,10 +67,6 @@ export default {
           form.link = instance.form.link;
           form.name = instance.form.name;
           form.nameEN = instance.form.nameEN;
-          if (!form.name || !form.nameEN) {
-            this.$showWarning('请填写banner文字');
-            return;
-          }
           form.weight = instance.form.weight;
           form.id = instance.form.id;
           form.menuId = this.menuId;

@@ -14,16 +14,15 @@
                     <plugin-uploadPic ref="file">选择文件</plugin-uploadPic>
                     <!-- <p>建议尺寸：1800*1200像素</p> -->
                 </td>
-                </td>
             </tr>
             <tr>
-                <th><span class="required">*</span>主文字：</th>
+                <th>主文字：</th>
                 <td>
                     <input type="text" class="input input-percent" v-model="form.name" />
                 </td>
             </tr>
             <tr>
-                <th><span class="required">*</span>副文字：</th>
+                <th>副文字：</th>
                 <td>
                     <input type="text" class="input input-percent" v-model="form.nameEN" />
                 </td>
