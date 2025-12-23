@@ -4,7 +4,7 @@
       <table class="table-form-1">
         <caption>栏目设置</caption>
         <tr>
-          <th width="120"><span class="required">*</span>栏目名称：</th>
+          <th width="120">栏目名称：</th>
           <td>
             <input type="text" class="input" v-model="form.name" />
           </td>
@@ -17,7 +17,7 @@
           </td>
         </tr>
         <tr v-show="!hiddenContent">
-          <th><span class="required">*</span>内容：</th>
+          <th>内容：</th>
           <td>
             <plugin-editor :height="100" :html="form.content" ref="editor"></plugin-editor>
           </td>

@@ -51,18 +51,10 @@ export default {
     },
     save(){
       let content = this.$refs.editor.content;
-      if (!content&&!this.hiddenContent) {
-        this.$showWarning('请填写内容');
-        return;
-      }
       this.form.content = content;
       if (this.$refs.file.result.length > 0) {
         this.form.fileId = this.$refs.file.result[0].id;
         this.form.fileUrl = this.$refs.file.result[0].url;
-      }
-      if(!this.form.name){
-        this.$showWarning('请填写栏目名称');
-        return;
       }
       if (!this.form.title) {
         this.$showWarning('请填写页面标题');
