@@ -10,7 +10,7 @@
           </td>
         </tr>
         <tr>
-          <th width="120">图片上传：</th>
+          <th width="120">{{ String(menuId) === '12' ? '上传图片到视频下方：' : '图片上传：' }}</th>
           <td>
             <plugin-uploadPic ref="file">选择文件</plugin-uploadPic>
             <!-- <p>建议尺寸：1920*1080像素</p> -->

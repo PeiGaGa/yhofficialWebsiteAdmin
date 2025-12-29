@@ -85,6 +85,46 @@ export default {
   },
   methods: {
     init(WebUploader) {
+      const extensions = (this.fileName || [])
+        .map((x) => String(x || "").trim().toLowerCase().replace(/^\./, ""))
+        .filter(Boolean);
+      const mimeTypes = Array.from(
+        new Set(
+          extensions
+            .map((ext) => {
+              switch (ext) {
+                case "jpg":
+                case "jpeg":
+                  return "image/jpeg";
+                case "png":
+                  return "image/png";
+                case "gif":
+                  return "image/gif";
+                case "bmp":
+                  return "image/bmp";
+                case "webp":
+                  return "image/webp";
+                case "svg":
+                  return "image/svg+xml";
+                case "pdf":
+                  return "application/pdf";
+                default:
+                  return "";
+              }
+            })
+            .filter(Boolean)
+        )
+      );
+      const accept =
+        extensions.length > 0
+          ? {
+              title: "files",
+              extensions: extensions.join(","),
+              // 兼容：部分浏览器/运行时拿不到 file.type 时仍可用 extensions 校验
+              mimeTypes: mimeTypes.length > 0 ? mimeTypes.join(",") : undefined,
+            }
+          : undefined;
+
       //待上传文件的md5值（key为file id）
       //hook注册,参考https://github.com/fex-team/webuploader/issues/142
       WebUploader.Uploader.register(
@@ -126,6 +166,7 @@ export default {
         resize: false,
         compress: false,
         duplicate: true,
+        accept,
         fileSingleSizeLimit: 20 * 1024 * 1024,
         width: 1920,
         height: 400,
@@ -137,7 +178,15 @@ export default {
       });
       this.uploader.on("uploadSuccess", (file, res) => {
         this.percentage = 100;
-        if (this.useJcrop) {
+        const isGif = String(file && file.ext ? file.ext : "")
+          .trim()
+          .toLowerCase() === "gif";
+        if (this.useJcrop && isGif) {
+          // GIF 裁剪大概率会丢失动图效果，这里直接跳过裁剪保留原图
+          this.$showWarning("GIF 不支持裁剪，将直接上传原图");
+          this.setResult(res.data);
+          this.$loader.hide();
+        } else if (this.useJcrop) {
           this.loadPic(res.data);
         } else {
           this.setResult(res.data);
@@ -146,12 +195,23 @@ export default {
       });
       this.uploader.on("uploadError", (file) => {
         this.$showError("上传失败");
+        // 避免失败后遮罩一直存在
+        if (this.$loader && typeof this.$loader.hide === "function") {
+          this.$loader.hide();
+        } else if (Vue.$loader && typeof Vue.$loader.hide === "function") {
+          Vue.$loader.hide();
+        }
       });
       this.uploader.on("uploadComplete", (file) => {
         this.percentage = 0;
       });
-      this.uploader.on("error", function (type) {
-        this.$loader.hide();
+      // 注意：这里不能用 function，否则 this 会指向 WebUploader 实例，导致 this.$loader / this.$showError 未定义
+      this.uploader.on("error", (type) => {
+        if (this.$loader && typeof this.$loader.hide === "function") {
+          this.$loader.hide();
+        } else if (Vue.$loader && typeof Vue.$loader.hide === "function") {
+          Vue.$loader.hide();
+        }
         if (type == "Q_TYPE_DENIED") {
           this.$showError("请上传正确的图片格式");
         } else if (type == "Q_EXCEED_SIZE_LIMIT" || type == "F_EXCEED_SIZE") {
