@@ -132,6 +132,7 @@ export default {
               "deletetable", //删除表格
               //                            'simpleupload', //单图上传
               "insertimage", //多图上传
+              "insertvideo", //插入视频
               "time", //时间
               "date", //日期
               "spechars", //特殊字符

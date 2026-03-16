@@ -194,23 +194,23 @@
 
         //fontsize
         //字号
-        //,'fontsize':[10, 11, 12, 14, 16, 18, 20, 24, 36]
+        ,'fontsize':[10, 11, 12, 14, 16, 18, 20, 24, 36]
 
         //paragraph
         //段落格式 值留空时支持多语言自动识别，若配置，则以配置值为准
-        //,'paragraph':{'p':'', 'h1':'', 'h2':'', 'h3':'', 'h4':'', 'h5':'', 'h6':''}
+        ,'paragraph':{'p':'', 'h1':'', 'h2':'', 'h3':'', 'h4':'', 'h5':'', 'h6':''}
 
         //rowspacingtop
         //段间距 值和显示的名字相同
-        //,'rowspacingtop':['5', '10', '15', '20', '25']
+        ,'rowspacingtop':['5', '10', '15', '20', '25']
 
         //rowspacingBottom
         //段间距 值和显示的名字相同
-        //,'rowspacingbottom':['5', '10', '15', '20', '25']
+        ,'rowspacingbottom':['5', '10', '15', '20', '25']
 
         //lineheight
         //行内间距 值和显示的名字相同
-        //,'lineheight':['1', '1.5','1.75','2', '3', '4', '5']
+        ,'lineheight':['1', '1.5','1.75','2', '3', '4', '5']
 
         //customstyle
         //自定义样式，不支持国际化，此处配置值即可最后显示值
@@ -221,12 +221,12 @@
         //label 显示的名字也是用来标识不同类型的标识符，注意这个值每个要不同，
         //style 添加的样式
         //每一个对象就是一个自定义的样式
-        //,'customstyle':[
-        //    {tag:'h1', name:'tc', label:'', style:'border-bottom:#ccc 2px solid;padding:0 4px 0 0;text-align:center;margin:0 0 20px 0;'},
-        //    {tag:'h1', name:'tl',label:'', style:'border-bottom:#ccc 2px solid;padding:0 4px 0 0;margin:0 0 10px 0;'},
-        //    {tag:'span',name:'im', label:'', style:'font-style:italic;font-weight:bold'},
-        //    {tag:'span',name:'hi', label:'', style:'font-style:italic;font-weight:bold;color:rgb(51, 153, 204)'}
-        //]
+        ,'customstyle':[
+           {tag:'h1', name:'tc', label:'', style:'border-bottom:#ccc 2px solid;padding:0 4px 0 0;text-align:center;margin:0 0 20px 0;'},
+           {tag:'h1', name:'tl',label:'', style:'border-bottom:#ccc 2px solid;padding:0 4px 0 0;margin:0 0 10px 0;'},
+           {tag:'span',name:'im', label:'', style:'font-style:italic;font-weight:bold'},
+           {tag:'span',name:'hi', label:'', style:'font-style:italic;font-weight:bold;color:rgb(51, 153, 204)'}
+        ]
 
         //打开右键菜单功能
         //,enableContextMenu: true
@@ -303,23 +303,23 @@
 
         //autotypeset
         //自动排版参数
-        //,autotypeset: {
-        //    mergeEmptyline: true,           //合并空行
-        //    removeClass: true,              //去掉冗余的class
-        //    removeEmptyline: false,         //去掉空行
-        //    textAlign:"left",               //段落的排版方式，可以是 left,right,center,justify 去掉这个属性表示不执行排版
-        //    imageBlockLine: 'center',       //图片的浮动方式，独占一行剧中,左右浮动，默认: center,left,right,none 去掉这个属性表示不执行排版
-        //    pasteFilter: false,             //根据规则过滤没事粘贴进来的内容
-        //    clearFontSize: false,           //去掉所有的内嵌字号，使用编辑器默认的字号
-        //    clearFontFamily: false,         //去掉所有的内嵌字体，使用编辑器默认的字体
-        //    removeEmptyNode: false,         // 去掉空节点
-        //    //可以去掉的标签
-        //    removeTagNames: {标签名字:1},
-        //    indent: false,                  // 行首缩进
-        //    indentValue : '2em',            //行首缩进的大小
-        //    bdc2sb: false,
-        //    tobdc: false
-        //}
+        ,autotypeset: {
+           mergeEmptyline: true,           //合并空行
+           removeClass: true,              //去掉冗余的class
+           removeEmptyline: false,         //去掉空行
+           textAlign:"left",               //段落的排版方式，可以是 left,right,center,justify 去掉这个属性表示不执行排版
+           imageBlockLine: 'center',       //图片的浮动方式，独占一行剧中,左右浮动，默认: center,left,right,none 去掉这个属性表示不执行排版
+           pasteFilter: false,             //根据规则过滤没事粘贴进来的内容
+           clearFontSize: false,           //去掉所有的内嵌字号，使用编辑器默认的字号
+           clearFontFamily: false,         //去掉所有的内嵌字体，使用编辑器默认的字体
+           removeEmptyNode: false,         // 去掉空节点
+           //可以去掉的标签
+           removeTagNames: {标签名字:1},
+           indent: false,                  // 行首缩进
+           indentValue : '2em',            //行首缩进的大小
+           bdc2sb: false,
+           tobdc: false
+        }
 
         //tableDragable
         //表格是否可以拖拽
