@@ -39,6 +39,12 @@
           </td>
         </tr>
         <tr>
+          <th>图片跳转链接：</th>
+          <td>
+            <input type="text" class="input" v-model="form.link" />
+          </td>
+        </tr>
+        <tr>
           <th>
             <span class="required">*</span>内容：
           </th>
